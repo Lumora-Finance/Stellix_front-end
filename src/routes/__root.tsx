@@ -81,11 +81,11 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "StellarFlow" },
-      { name: "description", content: "Financial workspace for the Stellar ecosystem." },
-      { name: "author", content: "StellarFlow" },
-      { property: "og:title", content: "StellarFlow" },
-      { property: "og:description", content: "Financial workspace for the Stellar ecosystem." },
+      { title: "Stellix" },
+      { name: "description", content: "AI-powered financial workspace built for the Stellar ecosystem." },
+      { name: "author", content: "Stellix" },
+      { property: "og:title", content: "Stellix" },
+      { property: "og:description", content: "AI-powered financial workspace built for the Stellar ecosystem." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
       

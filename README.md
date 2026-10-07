@@ -1,10 +1,10 @@
 <div align="center">
 
-# StellarFlow
+# Stellix
 
-**An open-source financial workspace for the Stellar ecosystem.**
+**AI-powered financial workspace built for the Stellar ecosystem.**
 
-StellarFlow is a production-grade frontend application that gives individuals and developers a unified interface to manage Stellar wallets, track transactions, create invoices, and analyze financial activity, all in one place.
+Stellix combines digital asset management, payments, invoicing, transactions, analytics, and an intelligent financial assistant in one platform. Users can manage assets like USDC, XLM, and EURC, send and receive payments, create invoices, track financial activity, and use natural language to understand their finances.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.x-blue.svg)](https://www.typescriptlang.org/)
@@ -17,14 +17,14 @@ StellarFlow is a production-grade frontend application that gives individuals an
 
 ## Overview
 
-StellarFlow is built to feel like a serious financial product, not a generic crypto dashboard. It combines the design sensibility of a luxury fintech tool with the infrastructure of the Stellar network. The application runs on mock data today and is structured for a clean transition to Supabase, the Stellar SDK, and Soroban smart contracts without needing to rebuild the UI.
+Stellix brings AI-powered financial intelligence to the Stellar ecosystem, making onchain finance easier to understand, manage, and use. The application runs on demo data today and is structured for a clean transition to Supabase, the Stellar SDK, and Soroban smart contracts without needing to rebuild the UI.
 
 ---
 
 ## Features
 
 ### Wallet Management
-View your Stellar wallet address, check balances across multiple assets (XLM, USDC, and others), send and receive assets, and track portfolio changes over time. Every send and receive flow includes a confirmation step before anything is submitted.
+View your Stellar wallet address, check balances across USDC, XLM, and EURC, send and receive assets, and track portfolio changes over time. Every send and receive flow includes a confirmation step before anything is submitted.
 
 ### Transaction History
 Browse your full transaction history with search, filtering by asset, type, status, and date range. Each transaction opens in a detail view showing its hash, memo, and a direct link to the Stellar Explorer.
@@ -63,7 +63,7 @@ Manage your profile, wallet connection, notification preferences, security setti
 ## Project Structure
 
 ```
-stellarflow-workspace/
+stellix-frontend/
 ├── src/
 │   ├── components/         # Feature and UI components
 │   │   ├── analytics/      # Chart components
@@ -131,8 +131,8 @@ The entire application uses a strict two-color identity: **Gold** and **Milk**, 
 
 ```sh
 # Clone the repository
-git clone https://github.com/Clement-coder/stellarflow-workspace.git
-cd stellarflow-workspace
+git clone https://github.com/Lumora-Finance/Stellix_front-end.git
+cd stellix-frontend
 
 # Install dependencies
 npm install
@@ -181,8 +181,8 @@ Contributions are welcome. Follow the steps below to keep things consistent.
 ### 1. Fork and clone
 
 ```sh
-git clone https://github.com/<your-username>/stellarflow-workspace.git
-cd stellarflow-workspace
+git clone https://github.com/<your-username>/Stellix_front-end.git
+cd stellix-frontend
 npm install
 ```
 

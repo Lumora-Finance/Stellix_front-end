@@ -1,4 +1,4 @@
-# StellarFlow roadmap
+# Stellix roadmap
 
 - [ ] Create Gold + Milk design system, themes, motion, and responsive app shell
 - [ ] Add domain types, realistic mock data, and future-ready mock services
