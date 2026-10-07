@@ -1,0 +1,1 @@
+export const suggestedPrompts = ["How much did I spend this month?","Show my largest transactions.","Which invoices are unpaid?","Summarize my financial activity.","How much USDC do I have?","Create an invoice for a client."];
