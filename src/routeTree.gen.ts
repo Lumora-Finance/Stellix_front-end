@@ -12,10 +12,14 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as AnalyticsRouteImport } from './routes/analytics'
 import { Route as AssistantRouteImport } from './routes/assistant'
+import { Route as AutomationsRouteImport } from './routes/automations'
 import { Route as DashboardRouteImport } from './routes/dashboard'
+import { Route as GiftsRouteImport } from './routes/gifts'
 import { Route as HelpRouteImport } from './routes/help'
 import { Route as InvoicesRouteImport } from './routes/invoices'
 import { Route as ProfileRouteImport } from './routes/profile'
+import { Route as RecurringRouteImport } from './routes/recurring'
+import { Route as SalaryRouteImport } from './routes/salary'
 import { Route as SettingsRouteImport } from './routes/settings'
 import { Route as TransactionsRouteImport } from './routes/transactions'
 import { Route as WalletRouteImport } from './routes/wallet'
@@ -37,9 +41,19 @@ const AssistantRoute = AssistantRouteImport.update({
   path: '/assistant',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AutomationsRoute = AutomationsRouteImport.update({
+  id: '/automations',
+  path: '/automations',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const DashboardRoute = DashboardRouteImport.update({
   id: '/dashboard',
   path: '/dashboard',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GiftsRoute = GiftsRouteImport.update({
+  id: '/gifts',
+  path: '/gifts',
   getParentRoute: () => rootRouteImport,
 } as any)
 const HelpRoute = HelpRouteImport.update({
@@ -55,6 +69,16 @@ const InvoicesRoute = InvoicesRouteImport.update({
 const ProfileRoute = ProfileRouteImport.update({
   id: '/profile',
   path: '/profile',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RecurringRoute = RecurringRouteImport.update({
+  id: '/recurring',
+  path: '/recurring',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SalaryRoute = SalaryRouteImport.update({
+  id: '/salary',
+  path: '/salary',
   getParentRoute: () => rootRouteImport,
 } as any)
 const SettingsRoute = SettingsRouteImport.update({
@@ -87,10 +111,14 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/analytics': typeof AnalyticsRoute
   '/assistant': typeof AssistantRoute
+  '/automations': typeof AutomationsRoute
   '/dashboard': typeof DashboardRoute
+  '/gifts': typeof GiftsRoute
   '/help': typeof HelpRoute
   '/invoices': typeof InvoicesRouteWithChildren
   '/profile': typeof ProfileRoute
+  '/recurring': typeof RecurringRoute
+  '/salary': typeof SalaryRoute
   '/settings': typeof SettingsRoute
   '/transactions': typeof TransactionsRoute
   '/wallet': typeof WalletRoute
@@ -101,10 +129,14 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/analytics': typeof AnalyticsRoute
   '/assistant': typeof AssistantRoute
+  '/automations': typeof AutomationsRoute
   '/dashboard': typeof DashboardRoute
+  '/gifts': typeof GiftsRoute
   '/help': typeof HelpRoute
   '/invoices': typeof InvoicesRouteWithChildren
   '/profile': typeof ProfileRoute
+  '/recurring': typeof RecurringRoute
+  '/salary': typeof SalaryRoute
   '/settings': typeof SettingsRoute
   '/transactions': typeof TransactionsRoute
   '/wallet': typeof WalletRoute
@@ -116,10 +148,14 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/analytics': typeof AnalyticsRoute
   '/assistant': typeof AssistantRoute
+  '/automations': typeof AutomationsRoute
   '/dashboard': typeof DashboardRoute
+  '/gifts': typeof GiftsRoute
   '/help': typeof HelpRoute
   '/invoices': typeof InvoicesRouteWithChildren
   '/profile': typeof ProfileRoute
+  '/recurring': typeof RecurringRoute
+  '/salary': typeof SalaryRoute
   '/settings': typeof SettingsRoute
   '/transactions': typeof TransactionsRoute
   '/wallet': typeof WalletRoute
@@ -132,10 +168,14 @@ export interface FileRouteTypes {
     | '/'
     | '/analytics'
     | '/assistant'
+    | '/automations'
     | '/dashboard'
+    | '/gifts'
     | '/help'
     | '/invoices'
     | '/profile'
+    | '/recurring'
+    | '/salary'
     | '/settings'
     | '/transactions'
     | '/wallet'
@@ -146,10 +186,14 @@ export interface FileRouteTypes {
     | '/'
     | '/analytics'
     | '/assistant'
+    | '/automations'
     | '/dashboard'
+    | '/gifts'
     | '/help'
     | '/invoices'
     | '/profile'
+    | '/recurring'
+    | '/salary'
     | '/settings'
     | '/transactions'
     | '/wallet'
@@ -160,10 +204,14 @@ export interface FileRouteTypes {
     | '/'
     | '/analytics'
     | '/assistant'
+    | '/automations'
     | '/dashboard'
+    | '/gifts'
     | '/help'
     | '/invoices'
     | '/profile'
+    | '/recurring'
+    | '/salary'
     | '/settings'
     | '/transactions'
     | '/wallet'
@@ -175,10 +223,14 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AnalyticsRoute: typeof AnalyticsRoute
   AssistantRoute: typeof AssistantRoute
+  AutomationsRoute: typeof AutomationsRoute
   DashboardRoute: typeof DashboardRoute
+  GiftsRoute: typeof GiftsRoute
   HelpRoute: typeof HelpRoute
   InvoicesRoute: typeof InvoicesRouteWithChildren
   ProfileRoute: typeof ProfileRoute
+  RecurringRoute: typeof RecurringRoute
+  SalaryRoute: typeof SalaryRoute
   SettingsRoute: typeof SettingsRoute
   TransactionsRoute: typeof TransactionsRoute
   WalletRoute: typeof WalletRoute
@@ -207,11 +259,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AssistantRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/automations': {
+      id: '/automations'
+      path: '/automations'
+      fullPath: '/automations'
+      preLoaderRoute: typeof AutomationsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/dashboard': {
       id: '/dashboard'
       path: '/dashboard'
       fullPath: '/dashboard'
       preLoaderRoute: typeof DashboardRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/gifts': {
+      id: '/gifts'
+      path: '/gifts'
+      fullPath: '/gifts'
+      preLoaderRoute: typeof GiftsRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/help': {
@@ -233,6 +299,20 @@ declare module '@tanstack/react-router' {
       path: '/profile'
       fullPath: '/profile'
       preLoaderRoute: typeof ProfileRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/recurring': {
+      id: '/recurring'
+      path: '/recurring'
+      fullPath: '/recurring'
+      preLoaderRoute: typeof RecurringRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/salary': {
+      id: '/salary'
+      path: '/salary'
+      fullPath: '/salary'
+      preLoaderRoute: typeof SalaryRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/settings': {
@@ -291,10 +371,14 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AnalyticsRoute: AnalyticsRoute,
   AssistantRoute: AssistantRoute,
+  AutomationsRoute: AutomationsRoute,
   DashboardRoute: DashboardRoute,
+  GiftsRoute: GiftsRoute,
   HelpRoute: HelpRoute,
   InvoicesRoute: InvoicesRouteWithChildren,
   ProfileRoute: ProfileRoute,
+  RecurringRoute: RecurringRoute,
+  SalaryRoute: SalaryRoute,
   SettingsRoute: SettingsRoute,
   TransactionsRoute: TransactionsRoute,
   WalletRoute: WalletRoute,
